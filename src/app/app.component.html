@@ -1,0 +1,46 @@
+<h1 id="tableLabel">Tickets</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!tickets"><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
+
+<table *ngIf="tickets">
+    <thead>
+        <tr>
+            <th>Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let ticket of tickets">
+            <td>{{ ticket.ticketId }}</td>
+            <td>{{ ticket.categoryId }}</td>
+            <td>{{ ticket.subTypeId}}</td>
+            <td>{{ ticket.impactId}}</td>
+            <td>{{ ticket.summary}}</td>
+            <!-- <td>{{ ticket.reasonForRejection}}</td> -->
+            <td>{{ ticket.dateEntered}}</td>
+            <td>{{ ticket.enteredByUser }}</td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- 
+<h1 id="tableLabel">Weather forecast</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+
+<p *ngIf="!forecasts"><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
+
+<table *ngIf="forecasts">
+    <thead>
+        <tr>
+            <th>Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let forecast of forecasts">
+            <td>{{ forecast.summary }}</td>
+        </tr>
+    </tbody>
+</table>
+ -->
